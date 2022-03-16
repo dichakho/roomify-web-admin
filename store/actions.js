@@ -1,5 +1,5 @@
 const cookieparser = require('cookieparser')
-const Cookie = require('js-cookie')
+// const Cookie = require('js-cookie')
 export default {
   async nuxtServerInit({ commit }, { req }) {
     // console.log('req :>> ', req.headers)
