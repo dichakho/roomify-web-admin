@@ -17,6 +17,7 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  target: 'server',
   /*
    ** Customize the progress-bar color
    */
@@ -93,7 +94,8 @@ export default {
         ]
       }
     ],
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'cookie-universal-nuxt'
   ],
   /*
    ** Axios module configuration

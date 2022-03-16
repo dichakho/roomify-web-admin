@@ -258,7 +258,7 @@ export default {
           }, 1500)
         }
       } catch (error) {
-        console.log(error)
+        console.log('error', error)
         this.notifyToast(
           'error',
           'Error',

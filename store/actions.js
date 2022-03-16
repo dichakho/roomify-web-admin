@@ -20,7 +20,8 @@ export default {
     }
   },
   async logout({ commit }) {
-    await Cookie.remove('token')
+    // await Cookie.remove('token')
+    this.$cookies.remove('token')
     commit('user/SET_USER', null)
   },
   async requireAdmin() {

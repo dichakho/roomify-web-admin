@@ -111,7 +111,7 @@
 </template>
 
 <script>
-import Cookie from 'js-cookie'
+// import Cookie from 'js-cookie'
 export default {
   middleware: 'AdminAuthNotRequired',
   components: {},
@@ -145,16 +145,23 @@ export default {
             userResponse.data.role == 'ADMIN' ||
             userResponse.data.role == 'MODERATOR'
           ) {
-            Cookie.set('token', loginResponse.data.token, {
-              expires: 1
+            // Cookie.set('token', loginResponse.data.token, {
+            //   expires: 1
+            // })
+            this.$cookies.set('token', loginResponse.data.token, {
+              path: '/',
+              maxAge: 60 * 60 * 24 * 7,
+              secure: true
             })
             // Save token in state for other uses
             this.notifyToast('success', 'Success', 'Login successfully')
             this.$store.commit('user/SET_TOKEN', loginResponse.data.token)
+            console.log('!!!!', this.$store.state.user.token)
             this.$store.commit('user/SET_USER', userResponse.data)
             this.$router.push('/users')
           } else {
             this.notifyToast('error', 'Error', 'Not enough permission')
+            this.processing = false
           }
         } else {
           this.notifyToast('error', 'Error', 'Your account is banned')
