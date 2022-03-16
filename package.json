@@ -2,7 +2,7 @@
   "name": "nuxt-basic-boilerplate",
   "version": "1.0.0",
   "description": "My splendiferous Nuxt.js project",
-  "author": "GiaThuy12",
+  "author": "dichakho",
   "private": true,
   "noImplicitAny": false,
   "scripts": {

@@ -22,6 +22,10 @@
     "sidebar": "This is a sidebar",
     "footer": "This starter template is made by thecodeorigin.com"
   },
+  "modal": {
+    "confirm-ban": "Alert",
+    "banDescription": "Are you sure?"
+  },
   "secret-text": "This page requires authentication",
   "random-text": "This text use global scss variable in the component",
   "random-text-2": "Introduction page content",

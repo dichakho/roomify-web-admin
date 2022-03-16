@@ -123,7 +123,7 @@
               style="font-size: 7rem"
             />
             <h3 class="my-3 text-gray">
-              {{ $t('modal.confirmTitle') }}
+              {{ $t('modal.confirm-ban') }}
             </h3>
             <p class="text-gray">
               {{ $t('modal.banDescription') }}
